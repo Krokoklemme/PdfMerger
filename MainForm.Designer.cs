@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.inputGroup = new System.Windows.Forms.GroupBox();
+            this.clearOnMerge = new System.Windows.Forms.CheckBox();
             this.inputFileView = new System.Windows.Forms.ListView();
             this.clearFiles = new System.Windows.Forms.Button();
             this.removeFiles = new System.Windows.Forms.Button();
@@ -36,7 +38,6 @@
             this.mergeFiles = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveMergedPdfDialog = new System.Windows.Forms.SaveFileDialog();
-            this.clearOnMerge = new System.Windows.Forms.CheckBox();
             this.inputGroup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,17 @@
             this.inputGroup.TabIndex = 0;
             this.inputGroup.TabStop = false;
             this.inputGroup.Text = "Input Files";
+            // 
+            // clearOnMerge
+            // 
+            this.clearOnMerge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearOnMerge.AutoSize = true;
+            this.clearOnMerge.Location = new System.Drawing.Point(663, 372);
+            this.clearOnMerge.Name = "clearOnMerge";
+            this.clearOnMerge.Size = new System.Drawing.Size(106, 17);
+            this.clearOnMerge.TabIndex = 4;
+            this.clearOnMerge.Text = "Clear after merge";
+            this.clearOnMerge.UseVisualStyleBackColor = true;
             // 
             // inputFileView
             // 
@@ -124,17 +136,6 @@
             // 
             this.saveMergedPdfDialog.Filter = "PDF (*.pdf)|*.pdf;";
             // 
-            // clearOnMerge
-            // 
-            this.clearOnMerge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.clearOnMerge.AutoSize = true;
-            this.clearOnMerge.Location = new System.Drawing.Point(663, 372);
-            this.clearOnMerge.Name = "clearOnMerge";
-            this.clearOnMerge.Size = new System.Drawing.Size(106, 17);
-            this.clearOnMerge.TabIndex = 4;
-            this.clearOnMerge.Text = "Clear after merge";
-            this.clearOnMerge.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +143,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mergeFiles);
             this.Controls.Add(this.inputGroup);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "PDF Merger";
             this.inputGroup.ResumeLayout(false);
